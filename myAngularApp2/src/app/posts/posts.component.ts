@@ -9,13 +9,13 @@ import { Observable } from 'rxjs';
 })
 export class PostsComponent implements OnInit {
 
-  posts$: Object;
+  post$: Object;
 
   constructor( private data: DataService) { }
 
   ngOnInit() {
     this.data.getPosts().subscribe(
-      data => this.posts$ = data
+      data =>this.post$ = data
     );
   }
 
